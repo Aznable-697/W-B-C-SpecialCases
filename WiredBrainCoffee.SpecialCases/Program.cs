@@ -17,7 +17,22 @@ namespace WiredBrainCoffee.SpecialCases
 
             container.PrintItem<string>("Hello from Generic Method in Generic Class");
 
+            var result = Add(2, 3);
+            Console.WriteLine($"2+3={result}");
+
+            var result2 = Add(2.7, 3.3);
+            Console.WriteLine($"2.7+3.3={result2}");
+
             Console.ReadLine();
+        }
+
+        private static int  Add(int x, int y)
+        {        
+          return  x + y;
+        }
+        private static double Add(double x, double y)
+        {
+            return x + y;
         }
     }
     class ContainerBase
